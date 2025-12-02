@@ -65,9 +65,7 @@ month_to_num = {month: idx for idx, month in enumerate(months)}
 X['month_num'] = X['month'].map(month_to_num)
 X['month_sin'] = np.sin(2 * np.pi * X['month_num'] / 12)
 X['month_cos'] = np.cos(2 * np.pi * X['month_num'] / 12)
-X = X.drop(columns=['month', 'month_num'])
-
-# Wizualizacja macierzy korelacji za pomocą seaborn
+X.drop(columns=['duration','is_first_time','poutcome_none','month', 'month_num','marital_married','pdays'], inplace=True)  
 
 plt.figure(figsize=(16, 12))
 sns.heatmap(X.corr(), annot=True, fmt=".2f", cmap="coolwarm", linewidths=0.5)
