@@ -1,0 +1,7 @@
+EDA:
+Dla mnie jest to genialne że dostrzegłeś zależność między `poutcome` a a tym czy osoba rozmawiała wcześniej z bankiem. Sam raczej błądziłem w poszukiwaniu jakichkolwiek zależności xd Ciekawe również jest to, że użyłeś cyclic encoding dla miesiąca, czy logarytmizacja zmiennej `balance` na co również sam nie wpadłem. Ogólnie EDA moim zdaniem bardzo dobrze przeprowadzona (na pewno lepiej niż u mnie xd)
+Modele:
+Kolejne ciekawe rozwiązanie, że wyliczałeś sam wagę do sieci oraz xgb (chodzi o to `pos_weight = torch.tensor([num_net / num_pos]).to(device)`), tylko najwidoczniej chyba nie działa, bo precision jest dalej małe. U siebie po prostu dodałem przy wywołaniu GridSearchCV parametr scoring='precision' i modele dawały wtedy większą precyzje.
+Jeszcze jedna uwaga, co do samej organizacji kodu, bo ten do trenowania sieci wydaje się kilka razy powtarzać, więc można byłoby go wsadzić do jakieś funkcji przynajmniej we fragmentach.
+SHAP:
+Więcej wizualizacji niż ja, szczególnie fajne że dodałeś też globalną ważność cech o której sam nie pomyślałem w swoim zadaniu tylko same przykłady analizowałem xd

@@ -1,0 +1,5 @@
+Trochę mało opisany ten twój kod, wydaje mi się,
+że można byłoby trochę rozwinąć edę o jakąś macierz korelacji albo inne metryki ale sama transformacja danych żeby model mógł je przeczytać wydaje się być git,
+jedyne co zauważyłem to mapujesz miesiące na liczby i ja nie wiem czy to jest dobre no bo grudzień nie jest mocno ważniejszy od stycznia bo są obok siebie a ty zrobiłeś tak że jest między nimi duża różnica w wartościach.
+Co do modeli to nie wiem czy nie trzeba było robić testowanie hiperparametrów walidacją krzyżową ale tak to widać co przetestowałeś i jaki jest tego wynik. 
+Ogólnie to wychodzi raczej spoko chociaż te wyniki są dosyć niskie, wiadomo można dużo rzeczy dodać ale nikt nie robi idealnie.
